@@ -1,16 +1,16 @@
 {{ if .content.Skills }}
 <div class="sideSection">
     <div class="sideSection__heading">
-        <h2 class="sideSection__title">Skills</h2>
+        <h2 class="sideSection__title">{{ partial "_i18n" "Skills" }}</h2>
     </div>
     <div class="sideSection__content">
         <ul class="skills">
             <li>
                 {{ range .content.Skills }}
                 <ul class="skills__group">
-                    <span>{{ .Family | safeHTML }}</span>
+                    <span>{{ partial "_i18n" .Family }}</span>
                     {{ range .Items }}
-                    <li>{{ . | safeHTML }}</li>
+                        <li>{{ partial "_i18n" . | safeHTML }}</li>
                     {{ end }}
                 </ul>
                 {{ end }}

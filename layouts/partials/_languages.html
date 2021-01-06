@@ -1,14 +1,14 @@
 {{ if .content.Languages }}
 <div class="sideSection">
     <div class="sideSection__heading">
-        <h2 class="sideSection__title">Languages</h2>
+        <h2 class="sideSection__title">{{ partial "_i18n" "Languages" }}</h2>
     </div>
     <div class="sideSection__content">
         <ul class="language">
             {{ range .content.Languages }}
             <li class="language__item">
-                <div class="language__name">{{ .Name | safeHTML }}</div>
-                <div class="language__level">{{ .Level | safeHTML }}</div>
+                <div class="language__name">{{ partial "_i18n" .Name | safeHTML }}</div>
+                <div class="language__level">{{ partial "_i18n" .Level | safeHTML }}</div>
             </li>
             {{ end }}
         </ul>

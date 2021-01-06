@@ -1,11 +1,17 @@
 {{ if .content.BasicInfo.Contacts }}
-<div class="sideSection contact">
-    <ul>
-        {{ range .content.BasicInfo.Contacts }}
-        <li class="contact__item">
-            <i class="{{ .Icon }}"></i><span>{{ .Info | safeHTML }}</span>
-        </li>
-        {{ end }}
-    </ul>
+<div class="sideSection">
+    <div class="sideSection__heading">
+        <h2 class="sideSection__title">{{ partial "_i18n" "Contact" }}</h2>
+    </div>
+    <div class="sideSection__content">
+        <div class="sideSection contact">
+            <ul>
+                {{ range .content.BasicInfo.Contacts }}
+                <li class="contact__item">
+                    <i class="{{ .Icon }}"></i><span>{{ .Info | safeHTML }}</span>
+                </li>
+                {{ end }}
+            </ul>
+    </div>
 </div>
 {{ end }}

@@ -1,12 +1,12 @@
 {{ if .content.Interests }}
 <div class="sideSection">
     <div class="sideSection__heading">
-        <h2 class="sideSection__title">Interests</h2>
+        <h2 class="sideSection__title">{{ partial "_i18n" "Interests" }}</h2>
     </div>
     <div class="sideSection__content">
         <ul class="interests">
             {{ range .content.Interests }}
-            <li class="interests__item">{{ . | safeHTML }}</li>
+            <li class="interests__item">{{ partial "_i18n" . | safeHTML }}</li>
             {{ end }}
         </ul>
     </div>

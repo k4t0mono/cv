@@ -1,0 +1,4 @@
+{{ $txt := . | markdownify | i18n }}
+{{ if $txt }}
+    {{ $txt }} {{ else }} {{ . }}
+{{ end }}
