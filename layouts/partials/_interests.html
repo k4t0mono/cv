@@ -1,11 +1,11 @@
-{{ if .Site.Data.content.Interests }}
+{{ if .content.Interests }}
 <div class="sideSection">
     <div class="sideSection__heading">
         <h2 class="sideSection__title">Interests</h2>
     </div>
     <div class="sideSection__content">
         <ul class="interests">
-            {{ range .Site.Data.content.Interests }}
+            {{ range .content.Interests }}
             <li class="interests__item">{{ . | safeHTML }}</li>
             {{ end }}
         </ul>
