@@ -1,0 +1,14 @@
+{{ $key := index . 0  }}
+{{ $partial := index . 1  }}
+{{ $local := index . 2  }}
+{{ $global := index . 3  }}
+
+{{ if $local }}
+    {{ if ( index $local ( split $key "." ) ) }}
+        {{ partial $partial $local }}
+    {{ else }}
+        {{ partial $partial $global }}
+    {{end}}
+{{ else }}
+    {{ partial $partial $global }}
+{{ end }}

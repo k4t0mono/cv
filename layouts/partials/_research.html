@@ -1,0 +1,19 @@
+{{ if .content.Research }}
+<div id="research" class="section">
+    <div class="section__heading">
+        <h2 class="section__title">
+            {{ partial "_i18n" "Research" }}
+        </h2>
+    </div>
+    <div class="section__content">
+        <ol class="research__list">
+            {{ range .content.Research }}
+                <li class="research__bullet">
+                    {{ .Info | markdownify }}, doi: 
+                    <a href="https://doi.org/{{ .DOI }}" target="_blank">{{ .DOI }}</a>.
+                </li>
+            {{ end }}
+        </ol>
+    </div>
+</div>
+{{ end }}

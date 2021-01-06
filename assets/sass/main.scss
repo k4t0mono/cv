@@ -25,5 +25,6 @@ $pages: {{ .Site.Params.pages | default 1}} !default;
 @import "components/skills";
 @import "components/languages";
 @import "components/interests";
+@import "components/research";
 
 @import "components/404";

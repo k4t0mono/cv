@@ -1,0 +1,15 @@
+.research {
+    
+    &__list {
+        li {
+            list-style-position: inside;
+            list-style-type: none;
+            counter-increment: step-counter
+        }
+
+        li:before {
+            content: "[" counter(step-counter) "]";
+        }
+    }
+
+}
